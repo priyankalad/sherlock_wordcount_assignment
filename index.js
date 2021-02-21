@@ -16,10 +16,12 @@ const size = process.argv[2] ? process.argv[2] : 10;
   if (docContent && docContent.data) {
     let lines = docContent.data.split("\n");
     let map = new Map();
+    let totalwords = 0;
     for (let line of lines) {
-      let words = line.split(" ");
+      let words = line.trim().split(" ");
+      totalwords += words.length;
       for (let word of words) {
-        let lowerCaseWord = word.toLowerCase();
+        let lowerCaseWord = word.trim().toLowerCase();
         let count = 1;
         if (map.has(lowerCaseWord)) {
           count = map.get(lowerCaseWord);
