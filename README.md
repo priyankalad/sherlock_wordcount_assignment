@@ -11,7 +11,7 @@
 
 1. This code with consider only alphabets with case insensitivity.
 2. Number will not be considered as a word
-3. words starting or ending with characters like "...", "--", etc will not be considered.
+3. words starting or ending with characters like "...", "--", ",",".","?","!" etc will not be considered. (I couldn't fix this due to time issue, but the expected behavior is to include these words)
 
 # Technical:
 
