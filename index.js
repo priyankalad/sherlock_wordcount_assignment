@@ -7,7 +7,8 @@ let dictLink =
   "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=" +
   apiKey +
   "&lang=en-ru&text=";
-const size = process.argv[2];
+const size = process.argv[2] ? process.argv[2] : 10;
+
 (async function () {
   let results = [];
   let docContent = await getDocument();
